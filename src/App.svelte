@@ -10,13 +10,12 @@
     <div class="container">
         <header>
             <h1>Angel Zamora</h1>
-            <a href={null}>english</a>
         </header>
         <div class="content">
             <p>Disculpe la molestia.</p>
             <hr>
             <span>Este sitio se encuentra actualmente en mantenimiento.</span>
-            <button>Descargar CV de Ángel Zamora</button>
+            <a class="button" href="https://www.dropbox.com/s/gr2u0amwu3we8dn/CURRICULUM_ANGEL.pdf?dl=1" target="blank">Descargar CV de Ángel Zamora</a>
         </div>
         <div class="media">
             <a href="https://github.com/angeldesweb" target="blank" class="social github">
@@ -39,6 +38,25 @@
 </div>
 
 <style>
+    @media screen and (orientation:landscape) {
+        h1 {
+            font-size:8vw;        
+        }
+        header {
+            height:25%;
+        }
+    }
+
+    @media screen and (orientation:portrait) {
+        h1 {
+            font-size:8vh;
+            margin-top:1em;        
+        }
+        header {
+            height:15%;
+        }
+    }
+
     .app {
         width:100vw;
         height:100vh;
@@ -51,13 +69,14 @@
         width:100%;
         height: 100%;
         position:relative;
+        padding:0 .5em;
     }
     header {
-        background-color: rgba(0, 0, 0, 0.25);
-        height:30%;
+        background-color: rgba(0, 0, 0, 0.25);        
         display:flex;
         justify-content: center;
         backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur( 4px );
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
@@ -71,6 +90,7 @@
         background-position-y:top;
         color:transparent;
         background-clip: text;
+        -webkit-background-clip: text;
     }
 
     .content {
@@ -99,7 +119,9 @@
         margin-top:.5em;
         font-size:1em;
     }
-    button {
+    .button {
+        text-align:center;
+        text-decoration: none;
         background: rgba( 255, 255, 255, 0.25 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
@@ -111,7 +133,7 @@
         color:rgb(174, 174, 174);
     }
 
-    button:hover {
+    .button:hover {
         backdrop-filter: blur( 10px );
         -webkit-backdrop-filter: blur( 10px );
         color:#fff;
@@ -149,12 +171,14 @@
         background-color: rgba(0, 0, 0, 0.25);
         display:flex;
         justify-content: space-around;
+        gap:1em;
+        flex-wrap:wrap;
         backdrop-filter: blur(4px);
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         margin-bottom:0;
         position:absolute;
-        left:0;
-        right:0;
+        left:.5em;
+        right:.5em;
         bottom:0;
         padding:1em;
     }
